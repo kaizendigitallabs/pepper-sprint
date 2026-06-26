@@ -9,3 +9,9 @@
 body {
     font-family: var(--font-inter);
 }
+
+/* Animation for Marquee */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
