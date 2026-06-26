@@ -12,6 +12,8 @@
   --color-dark: #131111;
   --color-gray-dark: #474242;
   --color-gray: #c4c4c4;
+  --color-gray-soft: #f4f4f4;
+  --color-gray-lightest: #f7fafb;
 
   /* Fonts */
   --font-inter: 'Inter', sans-serif;
