@@ -20,36 +20,32 @@
   </head>
   <body class="bg-background text-foreground antialiased min-h-screen">
     <!-- Navbar -->
-    <header id="navbar" class="fixed top-0 z-50 py-4 bg-transparent w-full transition-all duration-300">
-      <nav class="flex px-[75px] items-center justify-between">
+    <header id="navbar" class="fixed top-0 z-50 bg-transparent w-full transition-all duration-300">
+      <div class="w-full mx-auto px-[100px] flex items-center justify-between h-[120px]">
         <!-- Logo -->
-        <a href="#" class="flex-shrink-0">
-          <img src="assets/logo.png" alt="Logo" class="h-[40px] w-auto" />
+        <a href="#" class="flex items-center w-[255px]">
+          <img src="assets/logo.png" alt="PepperSprint" class="w-full h-auto object-contain" />
         </a>
 
-        <!-- Menu -->
-        <div class="flex items-center gap-[27px] text-[15px] font-normal text-white">
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex gap-[36px] items-center text-white text-[20px] leading-[150%] font-normal">
           <a href="#" class="hover:text-gray-300 transition-colors">Services</a>
           <a href="#" class="hover:text-gray-300 transition-colors">How We Work</a>
           <a href="#" class="hover:text-gray-300 transition-colors">Case Studies</a>
           <a href="#" class="hover:text-gray-300 transition-colors">About</a>
           <a href="#" class="hover:text-gray-300 transition-colors">Resources</a>
-        </div>
+        </nav>
 
-        <!-- Buttons -->
-        <div class="flex items-center gap-[18px]">
-          <a
-            href="#"
-            class="flex items-center justify-center h-[48px] px-[18px] py-[12px] rounded-[9px] border border-white bg-white/10 hover:bg-white/20 transition-colors">
-            <span class="font-bold text-[15px] text-white">WA Chat</span>
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-[24px]">
+          <a href="#" class="bg-white/10 hover:bg-white/20 text-white border border-white hover:bg-white/10 w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[140%] font-bold transition-colors">
+            WA Chat
           </a>
-          <a
-            href="#"
-            class="flex items-center justify-center h-[48px] px-[18px] py-[12px] rounded-[9px] bg-[#ef6a1a] hover:bg-[#d95d14] transition-colors">
-            <span class="font-bold text-[15px] text-white">Let’s Talk</span>
+          <a href="#" class="bg-[#ef6a1a] hover:bg-[#d95d14] text-white w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[140%] font-bold transition-colors">
+            Let's Talk
           </a>
         </div>
-      </nav>
+      </div>
     </header>
     <!-- Main Content -->
     <main class="w-full">
