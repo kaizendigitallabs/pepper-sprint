@@ -6,20 +6,11 @@
     <title>Pepper Sprint</title>
     <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="styles.css" />
 
-    <!-- Custom styling with Tailwind v4 API -->
-    <style type="text/tailwindcss">
-      @theme {
-        --color-background: var(--color-background);
-        --color-foreground: var(--color-foreground);
-        --font-sans: var(--font-inter);
-        --font-bricolage: var(--font-bricolage);
-        --animate-marquee: marquee 30s linear infinite;
-      }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-background text-foreground antialiased min-h-screen">
+  <body>
     <!-- Navbar -->
     <header id="navbar" class="fixed top-0 z-50 bg-transparent w-full transition-all duration-300">
       <div class="w-full mx-auto px-[100px] flex items-center justify-between h-[120px]">
@@ -29,7 +20,7 @@
         </a>
 
         <!-- Desktop Menu -->
-        <nav class="hidden md:flex gap-[36px] items-center text-white text-[20px] leading-[150%] font-normal">
+        <nav class="hidden md:flex gap-[36px] items-center text-white text-[20px] leading-[1.5] font-normal">
           <a href="#" class="hover:text-gray-300 transition-colors">Services</a>
           <a href="#" class="hover:text-gray-300 transition-colors">How We Work</a>
           <a href="#" class="hover:text-gray-300 transition-colors">Case Studies</a>
@@ -39,10 +30,14 @@
 
         <!-- CTA Buttons -->
         <div class="hidden md:flex items-center gap-[24px]">
-          <a href="#" class="bg-white/10 hover:bg-white/20 text-white border border-white hover:bg-white/10 w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[140%] font-bold transition-colors">
+          <a
+            href="#"
+            class="bg-white/10 hover:bg-white/20 text-white border border-white hover:bg-white/10 w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[1.4] font-bold transition-colors">
             WA Chat
           </a>
-          <a href="#" class="bg-[#ef6a1a] hover:bg-[#d95d14] text-white w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[140%] font-bold transition-colors">
+          <a
+            href="#"
+            class="bg-[#ef6a1a] hover:bg-[#d95d14] text-white w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[1.4] font-bold transition-colors">
             Let's Talk
           </a>
         </div>
@@ -54,7 +49,8 @@
       <section class="relative px-[100px] bg-[#030101] w-full min-h-[1040px] flex items-center">
         <!-- Background Images and Gradient -->
         <div class="absolute inset-0 z-0">
-          <div class="bg-[url(/assets/hero-bg.png)] -scale-x-100 w-full h-full bg-cover bg-no-repeat bg-[center_75%]"></div>
+          <div
+            class="bg-[url(/assets/hero-bg.png)] -scale-x-100 w-full h-full bg-cover bg-no-repeat bg-[center_75%]"></div>
           <!-- Radial Gradient Overlay -->
           <div class="absolute inset-0 bg-[radial-gradient(transparent_0%,rgba(0,0,0,0.5)_100%)]"></div>
         </div>
@@ -67,7 +63,9 @@
               <!-- Label -->
               <div class="flex gap-[16px] items-center w-full">
                 <div class="bg-[#ef6a1a] h-[4px] w-[48px]"></div>
-                <p class="font-bold text-[#ef6a1a] text-[20px] leading-[1.4]">ENGINEERING SUPPORT FOR AMBITIOUS TEAMS</p>
+                <p class="font-bold text-[#ef6a1a] text-[20px] leading-[1.4]">
+                  ENGINEERING SUPPORT FOR AMBITIOUS TEAMS
+                </p>
               </div>
 
               <!-- Heading -->
@@ -81,7 +79,7 @@
               <!-- Subtitle -->
               <div class="text-[24px] text-white font-normal leading-[1.5]">
                 <p>
-                  We integrate with your team, tools, and processes.<br>
+                  We integrate with your team, tools, and processes.<br />
                   Start small. Build trust and scale with confidence.
                 </p>
               </div>
@@ -129,10 +127,15 @@
       <!-- Marquee Section -->
       <section class="bg-white w-full overflow-hidden">
         <div class="py-[40px] px-[100px] flex gap-[80px] items-center">
-          <p class="font-bold text-[#131111] text-[18px] leading-[1.5] whitespace-pre shrink-0 uppercase">TRUSTED BY PRODUCT &  ENGINEERING LEADERS</p>
-          <div class="flex flex-1 overflow-hidden relative h-[100px] items-center" style="mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);">
-            <!-- Marquee Track (4 sets for seamless wide-screen support, 50% translation matches 2 sets) -->
-            <div class="flex gap-[64px] items-center shrink-0 pr-[64px] animate-marquee hover:[animation-play-state:paused]">
+          <p class="font-bold text-[#131111] text-[18px] leading-[1.5] whitespace-pre shrink-0 uppercase">
+            TRUSTED BY PRODUCT & ENGINEERING LEADERS
+          </p>
+          <div
+            class="flex flex-1 overflow-hidden relative h-[100px] items-center"
+            style="mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent)">
+            <!-- Marquee Track -->
+            <div
+              class="flex gap-[64px] items-center shrink-0 pr-[64px] animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
               <!-- Set 1 -->
               <img src="assets/partner-1.png" alt="Partner 1" class="h-[61px] w-[142px] object-contain" />
               <img src="assets/partner-2.png" alt="Partner 2" class="h-[61px] w-[92px] object-contain" />
@@ -171,17 +174,20 @@
             Be Doing Non-Core Work
           </h2>
         </div>
-        
+
         <!-- Cards Container -->
         <div class="flex gap-[24px] items-start w-full">
           <!-- Card 1 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
-            <div class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+            <div
+              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-backlogs.png" alt="Backlogs" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">Backlogs keep<br />growing</h3>
-              <p class="font-normal text-[20px] leading-[1.5] text-[#474242]">Repetitive work takes priority over core development</p>
+              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+                Backlogs keep<br />growing
+              </h3>
+              <p class="font-normal text-[20px] leading-[1.5]">Repetitive work takes priority over core development</p>
             </div>
           </div>
 
@@ -190,12 +196,17 @@
 
           <!-- Card 2 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
-            <div class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+            <div
+              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-bugs.png" alt="Bugs" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">Engineers stuck<br />on bugs</h3>
-              <p class="font-normal text-[20px] leading-[1.5] text-[#474242]">Senior developers spend time on maintenance and support</p>
+              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+                Engineers stuck<br />on bugs
+              </h3>
+              <p class="font-normal text-[20px] leading-[1.5]">
+                Senior developers spend time on maintenance and support
+              </p>
             </div>
           </div>
 
@@ -204,12 +215,15 @@
 
           <!-- Card 3 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
-            <div class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+            <div
+              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-apis.png" alt="APIs" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">APIs & Integrations<br />pile up</h3>
-              <p class="font-normal text-[20px] leading-[1.5] text-[#474242]">Important work delayed due to limited capacity</p>
+              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+                APIs & Integrations<br />pile up
+              </h3>
+              <p class="font-normal text-[20px] leading-[1.5]">Important work delayed due to limited capacity</p>
             </div>
           </div>
 
@@ -218,12 +232,15 @@
 
           <!-- Card 4 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
-            <div class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+            <div
+              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-legacy.png" alt="Legacy" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">Legacy systems<br />drain time</h3>
-              <p class="font-normal text-[20px] leading-[1.5] text-[#474242]">Old systems require constant attention and updates</p>
+              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+                Legacy systems<br />drain time
+              </h3>
+              <p class="font-normal text-[20px] leading-[1.5]">Old systems require constant attention and updates</p>
             </div>
           </div>
 
@@ -232,12 +249,15 @@
 
           <!-- Card 5 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
-            <div class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+            <div
+              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-cost.png" alt="Cost" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">High-cost<br />inefficiency</h3>
-              <p class="font-normal text-[20px] leading-[1.5] text-[#474242]">Expensive talent used for low-impact work</p>
+              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+                High-cost<br />inefficiency
+              </h3>
+              <p class="font-normal text-[20px] leading-[1.5]">Expensive talent used for low-impact work</p>
             </div>
           </div>
         </div>
@@ -256,7 +276,9 @@
               We handle non-core activities.<br />
               You focus on building what matters.
             </p>
-            <a href="#" class="bg-[#ef6a1a] hover:bg-[#d95d14] flex gap-[8px] h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors">
+            <a
+              href="#"
+              class="bg-[#ef6a1a] hover:bg-[#d95d14] flex gap-[8px] h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors">
               <span class="font-bold text-[20px] text-white">How We Start</span>
               <img src="assets/arrow-right-line.svg" alt="Arrow Right" class="w-[24px] h-[24px]" />
             </a>
@@ -272,19 +294,19 @@
               <div class="flex flex-col gap-[24px]">
                 <div class="flex gap-[8px] items-center">
                   <img src="assets/checkbox-circle-line.svg" alt="Check" class="w-[24px] h-[24px]" />
-                  <span class="font-normal text-[#474242] text-[24px] leading-[1.5]">Product strategy</span>
+                  <span class="font-normal text-[24px] leading-[1.5]">Product strategy</span>
                 </div>
                 <div class="flex gap-[8px] items-center">
                   <img src="assets/checkbox-circle-line.svg" alt="Check" class="w-[24px] h-[24px]" />
-                  <span class="font-normal text-[#474242] text-[24px] leading-[1.5]">Architecture</span>
+                  <span class="font-normal text-[24px] leading-[1.5]">Architecture</span>
                 </div>
                 <div class="flex gap-[8px] items-center">
                   <img src="assets/checkbox-circle-line.svg" alt="Check" class="w-[24px] h-[24px]" />
-                  <span class="font-normal text-[#474242] text-[24px] leading-[1.5]">Core features</span>
+                  <span class="font-normal text-[24px] leading-[1.5]">Core features</span>
                 </div>
                 <div class="flex gap-[8px] items-center">
                   <img src="assets/checkbox-circle-line.svg" alt="Check" class="w-[24px] h-[24px]" />
-                  <span class="font-normal text-[#474242] text-[24px] leading-[1.5]">Innovation</span>
+                  <span class="font-normal text-[24px] leading-[1.5]">Innovation</span>
                 </div>
               </div>
             </div>
@@ -318,7 +340,9 @@
             <div class="bg-[#131111] flex flex-[1_0_0] flex-col justify-center gap-[8px] p-[48px] rounded-[24px]">
               <span class="font-normal text-[#c4c4c4] text-[18px] leading-[1.5]">RESULT</span>
               <h3 class="font-bold text-white text-[36px] leading-[1.4] capitalize">Faster Delivery</h3>
-              <p class="font-normal text-white text-[24px] leading-[1.5]">Faster roadmap delivery and better outcomes</p>
+              <p class="font-normal text-white text-[24px] leading-[1.5]">
+                Faster roadmap delivery and better outcomes
+              </p>
             </div>
           </div>
         </div>
@@ -337,50 +361,58 @@
         <!-- Cards -->
         <div class="flex gap-[24px] items-stretch w-full">
           <!-- Card 1 -->
-          <div class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
-            <div class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
+          <div
+            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            <div
+              class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-1.png" alt="Step 1 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
             <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">01</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
               <h3 class="font-bold text-[#131111] leading-[1.5]">Understand</h3>
-              <p class="font-normal text-[#474242] leading-[1.5]">We learn your goals, team, and current challenges.</p>
+              <p class="font-normal leading-[1.5]">We learn your goals, team, and current challenges.</p>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
-            <div class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
+          <div
+            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            <div
+              class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-2.png" alt="Step 2 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
             <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">02</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
               <h3 class="font-bold text-[#131111] leading-[1.5]">Start small</h3>
-              <p class="font-normal text-[#474242] leading-[1.5]">We begin with a focused engagement and quick wins.</p>
+              <p class="font-normal leading-[1.5]">We begin with a focused engagement and quick wins.</p>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
-            <div class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
+          <div
+            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            <div
+              class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-3.png" alt="Step 3 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
             <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">03</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
               <h3 class="font-bold text-[#131111] leading-[1.5]">Integrate</h3>
-              <p class="font-normal text-[#474242] leading-[1.5]">Our engineers plug into your tools, processes and workflow</p>
+              <p class="font-normal leading-[1.5]">Our engineers plug into your tools, processes and workflow</p>
             </div>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
-            <div class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
+          <div
+            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            <div
+              class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-4.png" alt="Step 4 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
             <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">04</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
               <h3 class="font-bold text-[#131111] leading-[1.5]">Scale confidently</h3>
-              <p class="font-normal text-[#474242] leading-[1.5]">Expand the engagement when collaboration is proven.</p>
+              <p class="font-normal leading-[1.5]">Expand the engagement when collaboration is proven.</p>
             </div>
           </div>
         </div>
@@ -388,10 +420,12 @@
         <!-- Goal Button -->
         <div class="bg-[#f2833f] flex gap-[24px] items-center justify-center px-[48px] py-[24px] rounded-[24px] w-full">
           <img src="assets/shield-check.svg" alt="Shield Check" class="w-[48px] h-[48px]" />
-          <p class="font-bold text-[24px] leading-[1.5] text-white">Our goal: become a reliable extension of your engineering team</p>
+          <p class="font-bold text-[24px] leading-[1.5] text-white">
+            Our goal: become a reliable extension of your engineering team
+          </p>
         </div>
       </section>
-      
+
       <!-- Footer Section -->
       <footer class="bg-[#131111] w-full py-[100px] px-[100px] flex flex-col gap-[100px] text-white overflow-hidden">
         <!-- Top About Section -->
@@ -507,7 +541,9 @@
           <div class="flex flex-col gap-[24px]">
             <h3 class="font-bold text-[24px]">Contact</h3>
             <div class="flex flex-col gap-[16px] text-[20px] text-[#c4c4c4]">
-              <a href="mailto:info@peppersprint.com" class="flex gap-[12px] items-center hover:text-white transition-colors">
+              <a
+                href="mailto:info@peppersprint.com"
+                class="flex gap-[12px] items-center hover:text-white transition-colors">
                 <img src="assets/mail.svg" alt="Mail" class="w-[24px] h-[24px]" />
                 info@peppersprint.com
               </a>
