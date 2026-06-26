@@ -1,30 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #474242;
-}
-
-@theme {
   /* Colors */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #ffffff;
+  --color-foreground: #474242;
+  --color-primary: #ef6a1a;
+  --color-primary-dark: #d95d14;
+  --color-primary-light: #fff5eb;
+  --color-secondary: #f2833f;
+  --color-black: #030101;
+  --color-dark: #131111;
+  --color-gray-dark: #474242;
+  --color-gray: #c4c4c4;
 
   /* Fonts */
   --font-inter: 'Inter', sans-serif;
   --font-bricolage: 'Bricolage Grotesque', sans-serif;
-  --font-sans: var(--font-inter);
 
   /* Animations */
   --animate-marquee: marquee 30s linear infinite;
-}
-
-body {
-  font-family: var(--font-sans);
-  background: var(--background);
-  color: var(--foreground);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Animation for Marquee */

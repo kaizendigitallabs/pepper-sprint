@@ -9,8 +9,30 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Tailwind CDN Theme Configuration -->
+    <style type="text/tailwindcss">
+      @theme inline {
+        --color-background: var(--color-background);
+        --color-foreground: var(--color-foreground);
+        --color-primary: var(--color-primary);
+        --color-primary-dark: var(--color-primary-dark);
+        --color-primary-light: var(--color-primary-light);
+        --color-secondary: var(--color-secondary);
+        --color-black: var(--color-black);
+        --color-dark: var(--color-dark);
+        --color-gray-dark: var(--color-gray-dark);
+        --color-gray: var(--color-gray);
+        
+        --font-inter: var(--font-inter);
+        --font-bricolage: var(--font-bricolage);
+        --font-sans: var(--font-inter);
+        
+        --animate-marquee: var(--animate-marquee);
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-sans bg-background text-foreground antialiased">
     <!-- Navbar -->
     <header id="navbar" class="fixed top-0 z-50 bg-transparent w-full transition-all duration-300">
       <div class="w-full mx-auto px-[100px] flex items-center justify-between h-[120px]">
@@ -37,7 +59,7 @@
           </a>
           <a
             href="#"
-            class="bg-[#ef6a1a] hover:bg-[#d95d14] text-white w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[1.4] font-bold transition-colors">
+            class="bg-primary hover:bg-primary-dark text-white w-[140px] h-[64px] flex items-center justify-center rounded-[12px] text-[20px] leading-[1.4] font-bold transition-colors">
             Let's Talk
           </a>
         </div>
@@ -46,7 +68,7 @@
     <!-- Main Content -->
     <main class="w-full">
       <!-- Hero Section -->
-      <section class="relative px-[100px] bg-[#030101] w-full min-h-[1040px] flex items-center">
+      <section class="relative px-[100px] bg-black w-full min-h-[1040px] flex items-center">
         <!-- Background Images and Gradient -->
         <div class="absolute inset-0 z-0">
           <div
@@ -62,8 +84,8 @@
             <div class="flex flex-col gap-[24px] items-start max-w-[800px]">
               <!-- Label -->
               <div class="flex gap-[16px] items-center w-full">
-                <div class="bg-[#ef6a1a] h-[4px] w-[48px]"></div>
-                <p class="font-bold text-[#ef6a1a] text-[20px] leading-[1.4]">
+                <div class="bg-primary h-[4px] w-[48px]"></div>
+                <p class="font-bold text-primary text-[20px] leading-[1.4]">
                   ENGINEERING SUPPORT FOR AMBITIOUS TEAMS
                 </p>
               </div>
@@ -71,7 +93,7 @@
               <!-- Heading -->
               <div class="font-black leading-[1.3] text-[64px] text-white">
                 <h1>
-                  Let Your <span class="text-[#ef6a1a]">Core Team</span><br />
+                  Let Your <span class="text-primary">Core Team</span><br />
                   Focus on Innovation
                 </h1>
               </div>
@@ -89,17 +111,17 @@
             <div class="flex gap-[24px] items-start flex-wrap">
               <a
                 href="#"
-                class="bg-[#ef6a1a] hover:bg-[#d95d14] flex h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors shadow-lg">
+                class="bg-primary hover:bg-primary-dark flex h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors shadow-lg">
                 <span class="font-bold text-[20px] text-white">Start A Conversation</span>
               </a>
               <a
                 href="#"
-                class="bg-[#131111]/10 hover:bg-[#131111]/20 border border-white flex h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors shadow-sm">
+                class="bg-dark/10 hover:bg-dark/20 border border-white flex h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors shadow-sm">
                 <span class="font-bold text-[20px] text-white">See How We Work</span>
               </a>
               <a
                 href="#"
-                class="bg-[#131111]/10 hover:bg-[#131111]/20 border border-white flex gap-[8px] h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors shadow-sm">
+                class="bg-dark/10 hover:bg-dark/20 border border-white flex gap-[8px] h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors shadow-sm">
                 <img src="assets/whatsapp.svg" alt="WA" class="w-[24px] h-[24px]" />
                 <span class="font-bold text-[20px] text-white">Chat Now</span>
               </a>
@@ -109,15 +131,15 @@
             <div class="flex gap-[24px] items-start flex-wrap">
               <div class="flex gap-[8px] items-center">
                 <img src="assets/time.svg" alt="Time" class="w-[24px] h-[24px]" />
-                <span class="font-medium text-[#c4c4c4] text-[20px] leading-[1.5]">Start in 1-2 weeks</span>
+                <span class="font-medium text-gray text-[20px] leading-[1.5]">Start in 1-2 weeks</span>
               </div>
               <div class="flex gap-[8px] items-center">
                 <img src="assets/timezone.svg" alt="Timezone" class="w-[24px] h-[24px]" />
-                <span class="font-medium text-[#c4c4c4] text-[20px] leading-[1.5]">Time-zone overlap</span>
+                <span class="font-medium text-gray text-[20px] leading-[1.5]">Time-zone overlap</span>
               </div>
               <div class="flex gap-[8px] items-center">
                 <img src="assets/shield.svg" alt="Shield" class="w-[24px] h-[24px]" />
-                <span class="font-medium text-[#c4c4c4] text-[20px] leading-[1.5]">Build for product teams</span>
+                <span class="font-medium text-gray text-[20px] leading-[1.5]">Build for product teams</span>
               </div>
             </div>
           </div>
@@ -127,7 +149,7 @@
       <!-- Marquee Section -->
       <section class="bg-white w-full overflow-hidden">
         <div class="py-[40px] px-[100px] flex gap-[80px] items-center">
-          <p class="font-bold text-[#131111] text-[18px] leading-[1.5] whitespace-pre shrink-0 uppercase">
+          <p class="font-bold text-dark text-[18px] leading-[1.5] whitespace-pre shrink-0 uppercase">
             TRUSTED BY PRODUCT & ENGINEERING LEADERS
           </p>
           <div
@@ -135,8 +157,8 @@
             style="mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent)">
             <!-- Marquee Track -->
             <div
-              class="flex gap-[64px] items-center shrink-0 pr-[64px] animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
-              <!-- Set 1 -->
+              class="flex gap-[64px] items-center shrink-0 pr-[64px] animate-marquee hover:[animation-play-state:paused]">
+              <!-- Trusted by Logos (Set 1) -->
               <img src="assets/partner-1.png" alt="Partner 1" class="h-[61px] w-[142px] object-contain" />
               <img src="assets/partner-2.png" alt="Partner 2" class="h-[61px] w-[92px] object-contain" />
               <img src="assets/partner-3.png" alt="Partner 3" class="h-[56px] w-[165px] object-contain" />
@@ -169,8 +191,8 @@
       <section class="flex flex-col gap-[80px] items-center justify-center w-full p-[100px] bg-white">
         <!-- Title -->
         <div class="flex flex-col items-center justify-center text-center w-[868px]">
-          <h2 class="font-black text-[56px] leading-[1.4] text-[#131111]">
-            Your Core Engineers <span class="text-[#ef6a1a] capitalize">Shouldn’t</span>
+          <h2 class="font-black text-[56px] leading-[1.4] text-dark">
+            Your Core Engineers <span class="text-primary capitalize">Shouldn’t</span>
             Be Doing Non-Core Work
           </h2>
         </div>
@@ -180,11 +202,11 @@
           <!-- Card 1 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
             <div
-              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+              class="bg-primary-light flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-backlogs.png" alt="Backlogs" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+              <h3 class="font-bold text-[24px] leading-[1.5] text-dark whitespace-pre-wrap">
                 Backlogs keep<br />growing
               </h3>
               <p class="font-normal text-[20px] leading-[1.5]">Repetitive work takes priority over core development</p>
@@ -192,16 +214,16 @@
           </div>
 
           <!-- Divider -->
-          <div class="bg-[#c4c4c4] w-px self-stretch shrink-0 relative"></div>
+          <div class="bg-gray w-px self-stretch shrink-0 relative"></div>
 
           <!-- Card 2 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
             <div
-              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+              class="bg-primary-light flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-bugs.png" alt="Bugs" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+              <h3 class="font-bold text-[24px] leading-[1.5] text-dark whitespace-pre-wrap">
                 Engineers stuck<br />on bugs
               </h3>
               <p class="font-normal text-[20px] leading-[1.5]">
@@ -211,16 +233,16 @@
           </div>
 
           <!-- Divider -->
-          <div class="bg-[#c4c4c4] w-px self-stretch shrink-0 relative"></div>
+          <div class="bg-gray w-px self-stretch shrink-0 relative"></div>
 
           <!-- Card 3 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
             <div
-              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+              class="bg-primary-light flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-apis.png" alt="APIs" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+              <h3 class="font-bold text-[24px] leading-[1.5] text-dark whitespace-pre-wrap">
                 APIs & Integrations<br />pile up
               </h3>
               <p class="font-normal text-[20px] leading-[1.5]">Important work delayed due to limited capacity</p>
@@ -228,16 +250,16 @@
           </div>
 
           <!-- Divider -->
-          <div class="bg-[#c4c4c4] w-px self-stretch shrink-0 relative"></div>
+          <div class="bg-gray w-px self-stretch shrink-0 relative"></div>
 
           <!-- Card 4 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
             <div
-              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+              class="bg-primary-light flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-legacy.png" alt="Legacy" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+              <h3 class="font-bold text-[24px] leading-[1.5] text-dark whitespace-pre-wrap">
                 Legacy systems<br />drain time
               </h3>
               <p class="font-normal text-[20px] leading-[1.5]">Old systems require constant attention and updates</p>
@@ -245,16 +267,16 @@
           </div>
 
           <!-- Divider -->
-          <div class="bg-[#c4c4c4] w-px self-stretch shrink-0 relative"></div>
+          <div class="bg-gray w-px self-stretch shrink-0 relative"></div>
 
           <!-- Card 5 -->
           <div class="flex flex-[1_0_0] flex-col gap-[24px] items-center text-center min-w-px">
             <div
-              class="bg-[#fff5eb] flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
+              class="bg-primary-light flex items-center justify-center p-[12px] rounded-[8px] w-[72px] h-[72px] shrink-0">
               <img src="assets/icon-cost.png" alt="Cost" class="w-[48px] h-[48px] object-cover shrink-0" />
             </div>
             <div class="flex flex-col gap-[8px] items-center w-full">
-              <h3 class="font-bold text-[24px] leading-[1.5] text-[#131111] whitespace-pre-wrap">
+              <h3 class="font-bold text-[24px] leading-[1.5] text-dark whitespace-pre-wrap">
                 High-cost<br />inefficiency
               </h3>
               <p class="font-normal text-[20px] leading-[1.5]">Expensive talent used for low-impact work</p>
@@ -265,20 +287,20 @@
 
       <!-- Allocation Section -->
       <section class="flex w-full p-[100px] bg-white">
-        <div class="bg-[#fff5eb] w-full flex flex-col gap-[80px] p-[80px] rounded-[36px]">
+        <div class="bg-primary-light w-full flex flex-col gap-[80px] p-[80px] rounded-[36px]">
           <!-- Header -->
           <div class="flex items-center justify-between w-full">
-            <h2 class="font-black text-[#131111] text-[48px] leading-[1.4]">
-              A <span class="text-[#ef6a1a]">better</span> way to allocate<br />
+            <h2 class="font-black text-dark text-[48px] leading-[1.4]">
+              A <span class="text-primary">better</span> way to allocate<br />
               engineering capacity
             </h2>
-            <p class="font-normal text-[#131111] text-[24px] leading-[1.5]">
+            <p class="font-normal text-dark text-[24px] leading-[1.5]">
               We handle non-core activities.<br />
               You focus on building what matters.
             </p>
             <a
               href="#"
-              class="bg-[#ef6a1a] hover:bg-[#d95d14] flex gap-[8px] h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors">
+              class="bg-primary hover:bg-primary-dark flex gap-[8px] h-[72px] items-center justify-center px-[24px] py-[16px] rounded-[16px] transition-colors">
               <span class="font-bold text-[20px] text-white">How We Start</span>
               <img src="assets/arrow-right-line.svg" alt="Arrow Right" class="w-[24px] h-[24px]" />
             </a>
@@ -288,8 +310,8 @@
           <div class="flex gap-[36px] w-full items-stretch">
             <!-- Card 1 -->
             <div class="bg-white flex flex-[1_0_0] flex-col gap-[24px] p-[48px] rounded-[24px]">
-              <h3 class="font-bold text-[24px] text-[#131111] leading-[1.5]">
-                Your Team’s <span class="text-[#ef6a1a]">focus</span>
+              <h3 class="font-bold text-[24px] text-dark leading-[1.5]">
+                Your Team’s <span class="text-primary">focus</span>
               </h3>
               <div class="flex flex-col gap-[24px]">
                 <div class="flex gap-[8px] items-center">
@@ -312,9 +334,9 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-[#f2833f] flex flex-[1_0_0] flex-col gap-[24px] p-[48px] rounded-[24px]">
+            <div class="bg-secondary flex flex-[1_0_0] flex-col gap-[24px] p-[48px] rounded-[24px]">
               <h3 class="font-bold text-[24px] text-white leading-[1.5]">
-                PepperSprint <span class="text-[#131111]">handles</span>
+                PepperSprint <span class="text-dark">handles</span>
               </h3>
               <div class="flex flex-col gap-[24px]">
                 <div class="flex gap-[8px] items-center">
@@ -337,8 +359,8 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-[#131111] flex flex-[1_0_0] flex-col justify-center gap-[8px] p-[48px] rounded-[24px]">
-              <span class="font-normal text-[#c4c4c4] text-[18px] leading-[1.5]">RESULT</span>
+            <div class="bg-dark flex flex-[1_0_0] flex-col justify-center gap-[8px] p-[48px] rounded-[24px]">
+              <span class="font-normal text-gray text-[18px] leading-[1.5]">RESULT</span>
               <h3 class="font-bold text-white text-[36px] leading-[1.4] capitalize">Faster Delivery</h3>
               <p class="font-normal text-white text-[24px] leading-[1.5]">
                 Faster roadmap delivery and better outcomes
@@ -352,8 +374,8 @@
       <section class="flex flex-col gap-[80px] items-center justify-center w-full p-[100px] bg-white">
         <!-- Header -->
         <div class="flex flex-col gap-[24px] items-center justify-center text-center">
-          <h2 class="font-black text-[48px] leading-[1.4] text-[#131111] max-w-[571px]">
-            Start <span class="text-[#ef6a1a]">Small.</span> Build <span class="text-[#ef6a1a]">Trust.</span>
+          <h2 class="font-black text-[48px] leading-[1.4] text-dark max-w-[571px]">
+            Start <span class="text-primary">Small.</span> Build <span class="text-primary">Trust.</span>
             Scale With Confidence.
           </h2>
         </div>
@@ -362,63 +384,63 @@
         <div class="flex gap-[24px] items-stretch w-full">
           <!-- Card 1 -->
           <div
-            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            class="bg-white border border-gray flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
             <div
               class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-1.png" alt="Step 1 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
-            <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">01</p>
+            <p class="font-bricolage font-bold text-primary text-[64px] leading-[0.625]">01</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
-              <h3 class="font-bold text-[#131111] leading-[1.5]">Understand</h3>
+              <h3 class="font-bold text-dark leading-[1.5]">Understand</h3>
               <p class="font-normal leading-[1.5]">We learn your goals, team, and current challenges.</p>
             </div>
           </div>
 
           <!-- Card 2 -->
           <div
-            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            class="bg-white border border-gray flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
             <div
               class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-2.png" alt="Step 2 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
-            <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">02</p>
+            <p class="font-bricolage font-bold text-primary text-[64px] leading-[0.625]">02</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
-              <h3 class="font-bold text-[#131111] leading-[1.5]">Start small</h3>
+              <h3 class="font-bold text-dark leading-[1.5]">Start small</h3>
               <p class="font-normal leading-[1.5]">We begin with a focused engagement and quick wins.</p>
             </div>
           </div>
 
           <!-- Card 3 -->
           <div
-            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            class="bg-white border border-gray flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
             <div
               class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-3.png" alt="Step 3 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
-            <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">03</p>
+            <p class="font-bricolage font-bold text-primary text-[64px] leading-[0.625]">03</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
-              <h3 class="font-bold text-[#131111] leading-[1.5]">Integrate</h3>
+              <h3 class="font-bold text-dark leading-[1.5]">Integrate</h3>
               <p class="font-normal leading-[1.5]">Our engineers plug into your tools, processes and workflow</p>
             </div>
           </div>
 
           <!-- Card 4 -->
           <div
-            class="bg-white border border-[#c4c4c4] flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
+            class="bg-white border border-gray flex flex-[1_0_0] flex-col gap-[24px] px-[48px] pt-[48px] pb-[24px] rounded-[16px] relative overflow-hidden">
             <div
               class="absolute right-[24px] top-[24px] w-[100px] h-[100px] flex items-center justify-center opacity-30">
               <img src="assets/step-4.png" alt="Step 4 icon" class="w-[80px] h-[80px] object-contain" />
             </div>
-            <p class="font-bricolage font-bold text-[#ef6a1a] text-[64px] leading-[0.625]">04</p>
+            <p class="font-bricolage font-bold text-primary text-[64px] leading-[0.625]">04</p>
             <div class="flex flex-col gap-[8px] z-10 w-full text-[24px]">
-              <h3 class="font-bold text-[#131111] leading-[1.5]">Scale confidently</h3>
+              <h3 class="font-bold text-dark leading-[1.5]">Scale confidently</h3>
               <p class="font-normal leading-[1.5]">Expand the engagement when collaboration is proven.</p>
             </div>
           </div>
         </div>
 
         <!-- Goal Button -->
-        <div class="bg-[#f2833f] flex gap-[24px] items-center justify-center px-[48px] py-[24px] rounded-[24px] w-full">
+        <div class="bg-secondary flex gap-[24px] items-center justify-center px-[48px] py-[24px] rounded-[24px] w-full">
           <img src="assets/shield-check.svg" alt="Shield Check" class="w-[48px] h-[48px]" />
           <p class="font-bold text-[24px] leading-[1.5] text-white">
             Our goal: become a reliable extension of your engineering team
@@ -427,7 +449,7 @@
       </section>
 
       <!-- Footer Section -->
-      <footer class="bg-[#131111] w-full py-[100px] px-[100px] flex flex-col gap-[100px] text-white overflow-hidden">
+      <footer class="bg-dark w-full py-[100px] px-[100px] flex flex-col gap-[100px] text-white overflow-hidden">
         <!-- Top About Section -->
         <div class="flex gap-[50px] items-center w-full">
           <!-- Image -->
@@ -500,14 +522,14 @@
             <div class="flex flex-col gap-[16px] text-[20px] font-normal leading-[1.5] text-white">
               <p>Engineering Support for ambitious product teams.</p>
               <p>Start small, build trust, scale with confidence.</p>
-              <p class="text-[#c4c4c4] text-[18px]">© 2026 PepperSprint. All rights reserved.</p>
+              <p class="text-gray text-[18px]">© 2026 PepperSprint. All rights reserved.</p>
             </div>
           </div>
 
           <!-- Services Links -->
           <div class="flex flex-col gap-[24px]">
             <h3 class="font-bold text-[24px]">Services</h3>
-            <div class="flex flex-col gap-[16px] text-[20px] text-[#c4c4c4]">
+            <div class="flex flex-col gap-[16px] text-[20px] text-gray">
               <a href="#" class="hover:text-white transition-colors">Development Support</a>
               <a href="#" class="hover:text-white transition-colors">Extended Development</a>
               <a href="#" class="hover:text-white transition-colors">Legacy Modernization</a>
@@ -518,7 +540,7 @@
           <!-- Company Links -->
           <div class="flex flex-col gap-[24px]">
             <h3 class="font-bold text-[24px]">Company</h3>
-            <div class="flex flex-col gap-[16px] text-[20px] text-[#c4c4c4]">
+            <div class="flex flex-col gap-[16px] text-[20px] text-gray">
               <a href="#" class="hover:text-white transition-colors">How We Work</a>
               <a href="#" class="hover:text-white transition-colors">Case Studies</a>
               <a href="#" class="hover:text-white transition-colors">About Us</a>
@@ -529,7 +551,7 @@
           <!-- Resources Links -->
           <div class="flex flex-col gap-[24px]">
             <h3 class="font-bold text-[24px]">Resources</h3>
-            <div class="flex flex-col gap-[16px] text-[20px] text-[#c4c4c4]">
+            <div class="flex flex-col gap-[16px] text-[20px] text-gray">
               <a href="#" class="hover:text-white transition-colors">Blog</a>
               <a href="#" class="hover:text-white transition-colors">Insight</a>
               <a href="#" class="hover:text-white transition-colors">Guides</a>
@@ -540,7 +562,7 @@
           <!-- Contact Links -->
           <div class="flex flex-col gap-[24px]">
             <h3 class="font-bold text-[24px]">Contact</h3>
-            <div class="flex flex-col gap-[16px] text-[20px] text-[#c4c4c4]">
+            <div class="flex flex-col gap-[16px] text-[20px] text-gray">
               <a
                 href="mailto:info@peppersprint.com"
                 class="flex gap-[12px] items-center hover:text-white transition-colors">
