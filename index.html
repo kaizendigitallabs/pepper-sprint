@@ -50,10 +50,78 @@
         </div>
       </nav>
     </header>
-    <!-- Content Placeholder to test sticky scroll -->
-    <main class="w-full h-[200vh] p-[75px]">
-      <h1 class="text-4xl font-bold">Welcome to Pepper Sprint</h1>
-      <p class="mt-4 text-lg">Scroll down to see the sticky navbar in action.</p>
+    <!-- Main Content -->
+    <main class="w-full">
+      <!-- Hero Section -->
+      <section class="relative bg-[#030101] w-full min-h-[780px] flex items-center overflow-hidden">
+        <!-- Background Images and Gradient -->
+        <div class="absolute inset-0 z-0">
+          <div class="bg-[url(/assets/hero-bg.png)] -scale-x-100 w-full h-full bg-cover bg-no-repeat"></div>
+          <!-- Gradient Overlay to ensure text readability -->
+          <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto relative z-10">
+          <div class="flex flex-col items-start max-w-3xl px-[75px]">
+            <!-- Label -->
+            <div class="flex gap-[12px] items-center w-full">
+              <div class="bg-[#ef6a1a] h-[3px] w-[36px]"></div>
+              <p class="font-bold text-[#ef6a1a] text-[15px]">
+                ENGINEERING SUPPORT FOR AMBITIOUS TEAMS
+              </p>
+            </div>
+
+            <!-- Heading -->
+            <div class="my-[18px] font-black leading-[1.2] text-[48px] text-white">
+              <h1>
+                Let Your <span class="text-[#ef6a1a]">Core Team</span><br />
+                Focus on Innovation
+              </h1>
+            </div>
+
+            <!-- Subtitle -->
+            <div class="text-[18px] text-white font-normal leading-[1.5]">
+              <p>We integrate with your team, tools, and processes.</p>
+              <p>Start small. Build trust and scale with confidence.</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="my-[36px] flex gap-[18px] items-start flex-wrap">
+              <a href="#" class="bg-[#ef6a1a] hover:bg-[#d95d14] flex h-[54px] items-center justify-center px-[18px] py-[12px] rounded-[12px] transition-colors shadow-lg">
+                <span class="font-bold text-[15px] text-white">Start A Conversation</span>
+              </a>
+              <a href="#" class="bg-white/10 hover:bg-white/20 border border-white flex h-[54px] items-center justify-center px-[18px] py-[12px] rounded-[12px] transition-colors shadow-sm">
+                <span class="font-bold text-[15px] text-white">See How We Work</span>
+              </a>
+              <a href="#" class="bg-white/10 hover:bg-white/20 border border-white flex gap-[8px] h-[54px] items-center justify-center px-[18px] py-[12px] rounded-[12px] transition-colors shadow-sm">
+                <img src="assets/whatsapp.svg" alt="WA" class="w-[18px] h-[18px]" />
+                <span class="font-bold text-[15px] text-white">Chat Now</span>
+              </a>
+            </div>
+
+            <!-- Features/Labels -->
+            <div class="flex gap-[24px] items-center flex-wrap">
+              <div class="flex gap-[8px] items-center">
+                <img src="assets/time.svg" alt="Time" class="w-[18px] h-[18px]" />
+                <span class="font-medium text-[#c4c4c4] text-[15px]">Start in 1-2 weeks</span>
+              </div>
+              <div class="flex gap-[8px] items-center">
+                <img src="assets/timezone.svg" alt="Timezone" class="w-[18px] h-[18px]" />
+                <span class="font-medium text-[#c4c4c4] text-[15px]">Time-zone overlap</span>
+              </div>
+              <div class="flex gap-[8px] items-center">
+                <img src="assets/shield.svg" alt="Shield" class="w-[18px] h-[18px]" />
+                <span class="font-medium text-[#c4c4c4] text-[15px]">Build for product teams</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scroll padding area just to keep the sticky navbar testable -->
+      <div class="h-[100vh] bg-background"></div>
     </main>
   </body>
 </html>
