@@ -1153,7 +1153,7 @@
             <div class="flex flex-col gap-[16px] text-[20px] font-normal leading-[1.5] text-white">
               <p>Engineering Support for ambitious product teams.</p>
               <p>Start small, build trust, scale with confidence.</p>
-              <p class="text-gray text-[18px]">© 2026 PepperSprint. All rights reserved.</p>
+              <p class="text-gray text-[18px]">© <span id="copyright-year">2026</span> PepperSprint. All rights reserved.</p>
             </div>
           </div>
 
@@ -1229,6 +1229,8 @@
           navbar.classList.add('bg-transparent');
         }
       });
+      
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
