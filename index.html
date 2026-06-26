@@ -17,7 +17,43 @@
       }
     </style>
   </head>
-  <body class="bg-background text-foreground antialiased min-h-screen flex flex-col items-center justify-center">
-    <h1>Hello World</h1>
+  <body class="bg-background text-foreground antialiased min-h-screen">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 py-4 bg-[#0f172a] shadow-md w-full">
+      <nav class="container mx-auto px-[75px] flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex-shrink-0">
+          <img src="assets/logo.png" alt="Logo" class="h-[40px] w-auto" />
+        </a>
+
+        <!-- Menu -->
+        <div class="flex items-center gap-[27px] text-[15px] font-normal text-white">
+          <a href="#" class="hover:text-gray-300 transition-colors">Services</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">How We Work</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">Case Studies</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">About</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">Resources</a>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex items-center gap-[18px]">
+          <a
+            href="#"
+            class="flex items-center justify-center h-[48px] px-[18px] py-[12px] rounded-[9px] border border-white bg-white/10 hover:bg-white/20 transition-colors">
+            <span class="font-bold text-[15px] text-white">WA Chat</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center h-[48px] px-[18px] py-[12px] rounded-[9px] bg-[#ef6a1a] hover:bg-[#d95d14] transition-colors">
+            <span class="font-bold text-[15px] text-white">Let’s Talk</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Content Placeholder to test sticky scroll -->
+    <main class="w-full h-[200vh] p-[75px]">
+      <h1 class="text-4xl font-bold">Welcome to Pepper Sprint</h1>
+      <p class="mt-4 text-lg">Scroll down to see the sticky navbar in action.</p>
+    </main>
   </body>
 </html>
